@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_personnel"
+            android:title="Personnel" />
+        <item
+            android:id="@+id/nav_lab"
+            android:title="Lab" />
+        <item
+            android:id="@+id/nav_transport"
+            android:title="Transport" />
+        <item
+            android:id="@+id/nav_offset"
+            android:title="Offset" />
+        <item
+            android:id="@+id/nav_other"
+            android:title="Other" />
+        <item
+            android:id="@+id/nav_summary"
+            android:title="Summary" />
+    </group>
+
+</menu>
