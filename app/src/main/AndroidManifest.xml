@@ -26,6 +26,8 @@
             android:name=".Lab"
             android:label="@string/title_activity_lab"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".SignUpPage2" />
+        <activity android:name=".SignUpPage3" />
     </application>
 
 </manifest>
