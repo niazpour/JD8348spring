@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/JD8348spring.iml" filepath="$PROJECT_DIR$/JD8348spring.iml" />
+      <module fileurl="file://C:\Users\Roshni Ghosh\Documents\JD8348spring\JD8348spring\JD8348spring.iml" filepath="C:\Users\Roshni Ghosh\Documents\JD8348spring\JD8348spring\JD8348spring.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\Roshni Ghosh\Documents\JD8348spring\JD8348spring\app\app.iml" filepath="C:\Users\Roshni Ghosh\Documents\JD8348spring\JD8348spring\app\app.iml" />
     </modules>
   </component>
 </project>

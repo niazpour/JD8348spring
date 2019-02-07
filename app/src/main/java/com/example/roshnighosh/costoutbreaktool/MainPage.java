@@ -84,20 +84,28 @@ public class MainPage extends AppCompatActivity
         if (id == R.id.nav_lab) {
             Intent intent = new Intent(MainPage.this, Lab.class);
             startActivity(intent);
+        } else if (id == R.id.nav_retropersonnel) {
+            Intent intent = new Intent(MainPage.this, RetrospectivePersonnel.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_prosppersonnel) {
+            Intent intent = new Intent(MainPage.this, ProspectivePersonnel.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_offset) {
+            Intent intent = new Intent(MainPage.this, Offset.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_other) {
+            Intent intent = new Intent(MainPage.this, Other.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_overtime) {
+            Intent intent = new Intent(MainPage.this, Overtime.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_summary) {
+            Intent intent = new Intent(MainPage.this, Summary.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_transport) {
+            Intent intent = new Intent(MainPage.this, Transport.class);
+            startActivity(intent);
         }
-        /*if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        ///} else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
-        }*/
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

@@ -5,23 +5,29 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_personnel"
-            android:title="Personnel" />
+            android:id="@+id/nav_retropersonnel"
+            android:title="Retrospective Personnel" />
+        <item
+            android:id="@+id/nav_prosppersonnel"
+            android:title="Prospective Personnel" />
         <item
             android:id="@+id/nav_lab"
-            android:title="Lab" />
+            android:title="Laboratory" />
         <item
             android:id="@+id/nav_transport"
-            android:title="Transport" />
+            android:title="Transportation" />
         <item
             android:id="@+id/nav_offset"
-            android:title="Offset" />
+            android:title="Offset Work" />
+        <item
+            android:id="@+id/nav_overtime"
+            android:title="Overtime" />
         <item
             android:id="@+id/nav_other"
             android:title="Other" />
         <item
             android:id="@+id/nav_summary"
-            android:title="Summary" />
+            android:title="Summary Report" />
     </group>
 
 </menu>
