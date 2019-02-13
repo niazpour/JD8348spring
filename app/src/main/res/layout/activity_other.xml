@@ -5,5 +5,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.roshnighosh.costoutbreaktool.Other">
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="294dp"
+        android:layout_height="466dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="7dp"
+        android:text="  Please include any additional costs that were accrued as a result of the outbreak (e.g., legal filling fees, other physical materials, or fees associated with distribution of educational materials specific to the outbreak).
+If an emergency public health clinic is opened as a result of an acute outbreak response, please contact Hilary Whitham and we will provide additional tools to account for these services.
+"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Other"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        tools:layout_editor_absoluteX="7dp"
+        tools:layout_editor_absoluteY="7dp" />
 </android.support.constraint.ConstraintLayout>

@@ -5,5 +5,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.roshnighosh.costoutbreaktool.Overtime">
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="294dp"
+        android:layout_height="466dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="7dp"
+        android:text="	Normal work activities may have been offset (e.g., deprioritized, delayed, or not completed) do to an outbreak investigation.
+	These 'opportunity costs' are indirect effects of the outbreak, and while difficult to monetize, are important factors to include.
+	This tab provides for a qualitative assessment of any work activities/projects that were offset by the outbreak investigation.
+	Normal work activities may have been offset (e.g., deprioritized, delayed, or not completed) do to an outbreak investigation.
+	These 'opportunity costs' are indirect effects of the outbreak, and while difficult to monetize, are important factors to include.
+	This tab provides for a qualitative assessment of any work activities/projects that were offset by the outbreak investigation.
 
+
+"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Overtime"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        tools:layout_editor_absoluteX="7dp"
+        tools:layout_editor_absoluteY="7dp" />
 </android.support.constraint.ConstraintLayout>
