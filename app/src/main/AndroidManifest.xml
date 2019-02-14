@@ -29,11 +29,15 @@
         <activity android:name=".SignUpPage2" />
         <activity android:name=".SignUpPage3" />
         <activity android:name=".Transport" />
+        <activity android:name=".Transport2" />
+        <activity android:name=".Transport3" />
+        <activity android:name=".Transport4" />
         <activity android:name=".Offset" />
         <activity android:name=".Other" />
         <activity android:name=".Summary" />
         <activity android:name=".RetrospectivePersonnel" />
-        <activity android:name=".ProspectivePersonnel" />
+        <activity android:name=".ProspectivePersonnel1" />
+        <activity android:name=".ProspectivePersonnel2" />
         <activity android:name=".Overtime"></activity>
     </application>
 

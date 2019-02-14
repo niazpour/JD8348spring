@@ -84,12 +84,6 @@ public class MainPage extends AppCompatActivity
         if (id == R.id.nav_lab) {
             Intent intent = new Intent(MainPage.this, Lab.class);
             startActivity(intent);
-        } else if (id == R.id.nav_retropersonnel) {
-            Intent intent = new Intent(MainPage.this, RetrospectivePersonnel.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_prosppersonnel) {
-            Intent intent = new Intent(MainPage.this, ProspectivePersonnel.class);
-            startActivity(intent);
         } else if (id == R.id.nav_offset) {
             Intent intent = new Intent(MainPage.this, Offset.class);
             startActivity(intent);

@@ -1,5 +1,6 @@
 package com.example.roshnighosh.costoutbreaktool;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -93,19 +94,25 @@ public class Lab extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        /*if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
-        }*/
+        if (id == R.id.nav_lab) {
+            Intent intent = new Intent(Lab.this, Lab.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_offset) {
+            Intent intent = new Intent(Lab.this, Offset.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_other) {
+            Intent intent = new Intent(Lab.this, Other.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_overtime) {
+            Intent intent = new Intent(Lab.this, Overtime.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_summary) {
+            Intent intent = new Intent(Lab.this, Summary.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_transport) {
+            Intent intent = new Intent(Lab.this, Transport.class);
+            startActivity(intent);
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

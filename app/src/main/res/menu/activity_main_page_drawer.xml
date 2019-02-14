@@ -5,12 +5,6 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_retropersonnel"
-            android:title="Retrospective Personnel" />
-        <item
-            android:id="@+id/nav_prosppersonnel"
-            android:title="Prospective Personnel" />
-        <item
             android:id="@+id/nav_lab"
             android:title="Laboratory" />
         <item
