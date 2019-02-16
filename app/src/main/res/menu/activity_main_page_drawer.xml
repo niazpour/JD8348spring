@@ -5,17 +5,17 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/nav_prospective"
+            android:title="Prospective Personnel" />
+        <item
+            android:id="@+id/nav_retrospective"
+            android:title="Retrospective Personnel" />
+        <item
             android:id="@+id/nav_lab"
             android:title="Laboratory" />
         <item
             android:id="@+id/nav_transport"
             android:title="Transportation" />
-        <item
-            android:id="@+id/nav_offset"
-            android:title="Offset Work" />
-        <item
-            android:id="@+id/nav_overtime"
-            android:title="Overtime" />
         <item
             android:id="@+id/nav_other"
             android:title="Other" />

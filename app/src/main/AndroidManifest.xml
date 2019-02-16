@@ -32,6 +32,7 @@
         <activity android:name=".Transport2" />
         <activity android:name=".Transport3" />
         <activity android:name=".Transport4" />
+        <activity android:name=".Transport5" />
         <activity android:name=".Offset" />
         <activity android:name=".Other" />
         <activity android:name=".Summary" />

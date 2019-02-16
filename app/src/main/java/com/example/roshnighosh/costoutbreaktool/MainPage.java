@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
 public class MainPage extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -23,6 +24,17 @@ public class MainPage extends AppCompatActivity
         setContentView(R.layout.activity_main_page);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+//        final Button closeoutButton = findViewById(R.id.closeoutButton);
+//        final NavigationView mainView = findViewById(R.id.nav_view_main);
+//        final NavigationView closeoutView = findViewById(R.id.nav_view_closeout);
+//        closeoutButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                mainView.setVisibility(View.GONE);
+//                closeoutView.setVisibility(View.VISIBLE);
+//            }
+//        });
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -39,7 +51,7 @@ public class MainPage extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view_main);
         navigationView.setNavigationItemSelectedListener(this);
     }
 
@@ -84,14 +96,14 @@ public class MainPage extends AppCompatActivity
         if (id == R.id.nav_lab) {
             Intent intent = new Intent(MainPage.this, Lab.class);
             startActivity(intent);
-        } else if (id == R.id.nav_offset) {
-            Intent intent = new Intent(MainPage.this, Offset.class);
+        }  else if (id == R.id.nav_prospective) {
+            Intent intent = new Intent(MainPage.this, ProspectivePersonnel1.class);
+            startActivity(intent);
+        }  else if (id == R.id.nav_retrospective) {
+            Intent intent = new Intent(MainPage.this, RetrospectivePersonnel.class);
             startActivity(intent);
         } else if (id == R.id.nav_other) {
             Intent intent = new Intent(MainPage.this, Other.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_overtime) {
-            Intent intent = new Intent(MainPage.this, Overtime.class);
             startActivity(intent);
         } else if (id == R.id.nav_summary) {
             Intent intent = new Intent(MainPage.this, Summary.class);

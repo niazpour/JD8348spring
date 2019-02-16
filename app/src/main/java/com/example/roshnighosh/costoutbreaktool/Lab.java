@@ -14,13 +14,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Lab extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class Lab extends AppCompatActivity {
+        //implements NavigationView.OnNavigationItemSelectedListener
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,14 +39,14 @@ public class Lab extends AppCompatActivity
             }
         });
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
+//        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+//        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+//                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+//        drawer.addDrawerListener(toggle);
+//        toggle.syncState();
+//
+//        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+//        navigationView.setNavigationItemSelectedListener(this);
 
         /*setContentView(R.layout.content_lab);
 
@@ -54,17 +55,26 @@ public class Lab extends AppCompatActivity
         final String[] selections = new String[]{"1", "2", "3", "4", "5", "6", "7", "9", "10"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, selections);
         dropdown.setAdapter(adapter);*/
+
+        final Button finishButton = findViewById(R.id.finishButton);
+        finishButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Lab.this, MainPage.class);
+                startActivity(intent);
+            }
+        });
     }
 
-    @Override
-    public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
-    }
+//    @Override
+//    public void onBackPressed() {
+//        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+//        if (drawer.isDrawerOpen(GravityCompat.START)) {
+//            drawer.closeDrawer(GravityCompat.START);
+//        } else {
+//            super.onBackPressed();
+//        }
+//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -88,34 +98,28 @@ public class Lab extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
-
-        if (id == R.id.nav_lab) {
-            Intent intent = new Intent(Lab.this, Lab.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_offset) {
-            Intent intent = new Intent(Lab.this, Offset.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_other) {
-            Intent intent = new Intent(Lab.this, Other.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_overtime) {
-            Intent intent = new Intent(Lab.this, Overtime.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_summary) {
-            Intent intent = new Intent(Lab.this, Summary.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_transport) {
-            Intent intent = new Intent(Lab.this, Transport.class);
-            startActivity(intent);
-        }
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
-    }
+//    @SuppressWarnings("StatementWithEmptyBody")
+//    @Override
+//    public boolean onNavigationItemSelected(MenuItem item) {
+//        // Handle navigation view item clicks here.
+//        int id = item.getItemId();
+//
+//        if (id == R.id.nav_lab) {
+//            Intent intent = new Intent(Lab.this, Lab.class);
+//            startActivity(intent);
+//        }  else if (id == R.id.nav_other) {
+//            Intent intent = new Intent(Lab.this, Other.class);
+//            startActivity(intent);
+//        }  else if (id == R.id.nav_summary) {
+//            Intent intent = new Intent(Lab.this, Summary.class);
+//            startActivity(intent);
+//        } else if (id == R.id.nav_transport) {
+//            Intent intent = new Intent(Lab.this, Transport.class);
+//            startActivity(intent);
+//        }
+//
+//        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+//        drawer.closeDrawer(GravityCompat.START);
+//        return true;
+//    }
 }

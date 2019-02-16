@@ -17,11 +17,11 @@ public class Transport4 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transport4);
 
-        final Button finishButton = findViewById(R.id.finishButton);
-        finishButton.setOnClickListener(new View.OnClickListener() {
+        final Button nextButton = findViewById(R.id.nextButton);
+        nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Transport4.this, MainPage.class);
+                Intent intent = new Intent(Transport4.this, Transport5.class);
                 startActivity(intent);
             }
         });
