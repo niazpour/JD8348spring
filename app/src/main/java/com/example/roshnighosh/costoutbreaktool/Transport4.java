@@ -17,7 +17,7 @@ public class Transport4 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transport4);
 
-        final Button nextButton = findViewById(R.id.nextButton);
+        final Button nextButton = findViewById(R.id.finishButton);
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

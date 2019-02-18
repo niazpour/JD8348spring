@@ -147,7 +147,7 @@
         app:layout_constraintVertical_bias="0.309" />
 
     <Button
-        android:id="@+id/nextButton"
+        android:id="@+id/finishButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="72dp"
@@ -162,7 +162,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signupText"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.949" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"

@@ -13,7 +13,7 @@ public class Transport extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transport1);
 
-        final Button nextButton = findViewById(R.id.nextButton);
+        final Button nextButton = findViewById(R.id.finishButton);
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

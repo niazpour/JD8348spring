@@ -36,7 +36,10 @@
         <activity android:name=".Offset" />
         <activity android:name=".Other" />
         <activity android:name=".Summary" />
-        <activity android:name=".RetrospectivePersonnel" />
+        <activity android:name=".RetrospectivePersonnel1" />
+        <activity android:name=".RetrospectivePersonnel2" />
+        <activity android:name=".RetrospectivePersonnel3" />
+        <activity android:name=".RetrospectivePersonnel4" />
         <activity android:name=".ProspectivePersonnel1" />
         <activity android:name=".ProspectivePersonnel2" />
         <activity android:name=".Overtime"></activity>

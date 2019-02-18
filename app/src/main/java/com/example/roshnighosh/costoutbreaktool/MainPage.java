@@ -100,7 +100,7 @@ public class MainPage extends AppCompatActivity
             Intent intent = new Intent(MainPage.this, ProspectivePersonnel1.class);
             startActivity(intent);
         }  else if (id == R.id.nav_retrospective) {
-            Intent intent = new Intent(MainPage.this, RetrospectivePersonnel.class);
+            Intent intent = new Intent(MainPage.this, RetrospectivePersonnel1.class);
             startActivity(intent);
         } else if (id == R.id.nav_other) {
             Intent intent = new Intent(MainPage.this, Other.class);
