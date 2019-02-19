@@ -42,7 +42,10 @@
         <activity android:name=".RetrospectivePersonnel4" />
         <activity android:name=".ProspectivePersonnel1" />
         <activity android:name=".ProspectivePersonnel2" />
-        <activity android:name=".Overtime"></activity>
+        <activity android:name=".Overtime" />
+        <activity android:name=".Other2" />
+        <activity android:name=".Other3" />
+        <activity android:name=".Other4"></activity>
     </application>
 
 </manifest>

@@ -6,18 +6,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Other extends AppCompatActivity {
+public class Other2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_other);
+        setContentView(R.layout.activity_other2);
 
         final Button finishButton = findViewById(R.id.button2);
         finishButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Other.this, Other2.class);
+                Intent intent = new Intent(Other2.this, Other3.class);
                 startActivity(intent);
             }
         });
