@@ -4,7 +4,11 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
+
+import java.util.ArrayList;
 
 public class SignUpPage extends AppCompatActivity {
 
@@ -21,5 +25,20 @@ public class SignUpPage extends AppCompatActivity {
                 startActivity(intent2);
             }
         });
+
+        final String[] select_role = {
+                "Select Role", "Administrative", "Agency Leadership",
+               "Emergency Preparedness and Response", "Environmental Health",
+                "Epidemiology", "Laboratory (see note in description)",
+                "Legal", "Public Health Communications (media)",
+                "Public Health Nurse", "Student Worker (unpaid)"};
+
+        Spinner spinner = (Spinner) findViewById(R.id.roleSpinner);
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
+                this, android.R.layout.simple_spinner_item, select_role);
+
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
     }
 }

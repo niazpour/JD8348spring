@@ -35,7 +35,7 @@
         <android.support.design.widget.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="USERNAME"
+            android:hint="LASTNAME"
             android:inputType="textEmailAddress" />
     </android.support.design.widget.TextInputLayout>
 
@@ -53,7 +53,7 @@
         <android.support.design.widget.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="PASSWORD"
+            android:hint="WORK PHONE"
             android:inputType="textPassword" />
     </android.support.design.widget.TextInputLayout>
 

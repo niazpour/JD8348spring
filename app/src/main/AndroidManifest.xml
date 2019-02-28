@@ -45,7 +45,7 @@
         <activity android:name=".Overtime" />
         <activity android:name=".Other2" />
         <activity android:name=".Other3" />
-        <activity android:name=".Other4"></activity>
+        <activity android:name=".Other4"/>
     </application>
 
 </manifest>
