@@ -25,16 +25,14 @@ public class MainPage extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-//        final Button closeoutButton = findViewById(R.id.closeoutButton);
-//        final NavigationView mainView = findViewById(R.id.nav_view_main);
-//        final NavigationView closeoutView = findViewById(R.id.nav_view_closeout);
-//        closeoutButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                mainView.setVisibility(View.GONE);
-//                closeoutView.setVisibility(View.VISIBLE);
-//            }
-//        });
+        final Button closeOutButton = findViewById(R.id.closeOut);
+        closeOutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent intent = new Intent(MainPage.this, Offset.class);
+                startActivity(intent);
+            }
+        });
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {

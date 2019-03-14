@@ -13,7 +13,7 @@ public class Other extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_other);
 
-        final Button finishButton = findViewById(R.id.button2);
+        final Button finishButton = findViewById(R.id.nextButton);
         finishButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
