@@ -18,7 +18,7 @@ public class LoginPage extends AppCompatActivity {
         logButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                Intent intent = new Intent(LoginPage.this, ProspectivePersonnel1.class);
+                Intent intent = new Intent(LoginPage.this, OutbreakChoice.class);
                 startActivity(intent);
             }
         });
