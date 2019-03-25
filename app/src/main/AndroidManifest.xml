@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.roshnighosh.costoutbreaktool">
+    package="com.example.roshnighosh.costoutbreaktool"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://schemas.android.com/apk/res/android ">
 
     <!--<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>-->
     <!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>-->
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -13,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HomePage"
+        <activity
+            android:name=".HomePage"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,10 +24,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginPage"
+        <activity
+            android:name=".LoginPage"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".SignUpPage"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:name=".SignUpPage"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".MainPage"
             android:label="@string/title_activity_main_page"
@@ -33,56 +38,81 @@
             android:name=".Lab"
             android:label="@string/title_activity_lab"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".SignUpPage2"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".SignUpPage3"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".Transport"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".Transport2"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".Transport3"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".Transport4"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".Transport5"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".Offset"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".Offset2"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".Offset3"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".Summary"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".RetrospectivePersonnel1"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".RetrospectivePersonnel2"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".RetrospectivePersonnel3"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".RetrospectivePersonnel4"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".ProspectivePersonnel1"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".ProspectivePersonnel2"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".Overtime"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".Overtime2"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".Overtime3"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".Other"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".Other2"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".Other3"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".Other4"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".OutbreakChoice"
-            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".SignUpPage2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SignUpPage3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Transport"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Transport2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Transport3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Transport4"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Transport5"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Offset"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Offset2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Offset3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Summary"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".RetrospectivePersonnel1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".RetrospectivePersonnel2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".RetrospectivePersonnel3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".RetrospectivePersonnel4"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ProspectivePersonnel1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ProspectivePersonnel2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Overtime"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Overtime2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Overtime3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Other"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Other2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Other3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Other4"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".OutbreakChoice"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
