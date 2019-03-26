@@ -46,16 +46,16 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="120dp"
-        android:text="Work Email"
+        android:text="Last Name"
         android:textColor="@android:color/black"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/agencyInput"
+        app:layout_constraintEnd_toStartOf="@+id/lastnameInput"
         app:layout_constraintHorizontal_bias="0.213"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/agencyInput"
+        android:id="@+id/lastnameInput"
         android:layout_width="206dp"
         android:layout_height="39dp"
         android:layout_marginEnd="16dp"
@@ -82,7 +82,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/roleInput"
+        android:id="@+id/phoneInput"
         android:layout_width="206dp"
         android:layout_height="39dp"
         android:layout_marginBottom="8dp"
@@ -95,11 +95,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.927"
         app:layout_constraintStart_toEndOf="@+id/roleTag"
-        app:layout_constraintTop_toBottomOf="@+id/agencyInput"
+        app:layout_constraintTop_toBottomOf="@+id/lastnameInput"
         app:layout_constraintVertical_bias="0.144" />
 
     <Button
-        android:id="@+id/finishButton"
+        android:id="@+id/nextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"

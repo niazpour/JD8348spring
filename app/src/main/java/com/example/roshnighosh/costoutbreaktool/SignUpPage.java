@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.Spinner;
 
 import java.sql.Connection;
@@ -23,15 +25,26 @@ public class SignUpPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up_page);
 
-        final Button nextButton = findViewById(R.id.finishButton);
+        final ArrayList<String> page1signin = new ArrayList<>();
+
+        final Button nextButton = findViewById(R.id.nextButton);
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                EditText agencyInput = findViewById(R.id.agencyInput);
+                Spinner roleSpinner = findViewById(R.id.roleSpinner);
+                CheckBox yesBox = findViewById(R.id.leadCheckYes);
 
-                String jdbcUrl = "jdbc:mysql://10.0.2.2:3306/mydb";
-                new SignUpDB().execute(jdbcUrl);
+                page1signin.add(0, agencyInput.getText().toString());
+                page1signin.add(1, roleSpinner.getSelectedItem().toString());
+                if (yesBox.isChecked()) {
+                    page1signin.add(2, "yes");
+                } else {
+                    page1signin.add(2, "no");
+                }
 
                 Intent intent2 = new Intent(SignUpPage.this, SignUpPage2.class);
+                intent2.putExtra("page1", page1signin);
                 startActivity(intent2);
 
             }
@@ -51,35 +64,5 @@ public class SignUpPage extends AppCompatActivity {
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
-    }
-
-    private static class SignUpDB extends AsyncTask<String, String, String> {
-
-        @Override
-        protected String doInBackground(String[] objects) {
-
-            try {
-                Class.forName("com.mysql.jdbc.Driver");
-            } catch(ClassNotFoundException ex) {
-                System.err.println("Unable to load MySQL Driver");
-            }
-            System.out.println(Thread.currentThread().getName());
-
-            try(Connection con = DriverManager.getConnection(objects[0], "root", "M65IUaa5cx")) {
-                System.out.println("Connected!");
-                String queryString = "select version()";
-                Statement stmt = con.createStatement();
-                ResultSet rset = stmt.executeQuery(queryString);
-                while ( rset.next()) {
-                    System.out.println("Version: " + rset.getString(1));
-                }
-
-                rset.close();
-                stmt.close();
-            } catch(SQLException e) {
-                System.out.println("Failed");
-            }
-            return null;
-        }
     }
 }
