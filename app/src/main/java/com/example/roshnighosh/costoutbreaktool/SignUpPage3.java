@@ -38,7 +38,7 @@ public class SignUpPage3 extends AppCompatActivity {
 
                 page3signin = getIntent().getStringArrayListExtra("page2");
                 EditText dateInput = findViewById(R.id.dateInput);
-                page3signin.add(5, dateInput.getText().toString());
+                page3signin.add(6, dateInput.getText().toString());
 
                 new SignUpDB().execute();
 
@@ -61,14 +61,14 @@ public class SignUpPage3 extends AppCompatActivity {
             //FOR FUTURE WORK: change the below 3 parameters to match the database that is being used
             try(Connection con = DriverManager.getConnection("jdbc:mysql://academic-mysql.cc.gatech.edu", "cs3312_group", "_tADAn4D")) {
                 System.out.println("Connected!");
-                String queryString = "select version()";
+                String queryString1 = "USE cs3312_group;";
+                String queryString2 = "INSERT INTO user_info (agency, role, lead, last_name, phone_number, email, start_date) " +
+                        "VALUES ('"+page3signin.get(0)+"', '"+page3signin.get(1)+"', '"+page3signin.get(2)+"', '"+page3signin.get(3)+
+                        "', '"+page3signin.get(4)+"', '"+page3signin.get(5)+"', '"+page3signin.get(6)+"');";
+                System.out.println(queryString2);
                 Statement stmt = con.createStatement();
-                ResultSet rset = stmt.executeQuery(queryString);
-                while ( rset.next()) {
-                    System.out.println("Version: " + rset.getString(1));
-                    System.out.println(page3signin.get(5));
-                }
-                rset.close();
+                stmt.executeUpdate(queryString1);
+                stmt.executeUpdate(queryString2);
                 stmt.close();
             } catch(SQLException e) {
                 System.out.println("Failed");

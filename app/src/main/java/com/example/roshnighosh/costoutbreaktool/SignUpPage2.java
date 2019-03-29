@@ -28,9 +28,11 @@ public class SignUpPage2 extends AppCompatActivity {
                 ArrayList<String> page2signin = getIntent().getStringArrayListExtra("page1");
                 EditText lastnameInput = findViewById(R.id.lastnameInput);
                 EditText phoneInput = findViewById(R.id.phoneInput);
+                EditText emailInput = findViewById(R.id.emailInput);
 
                 page2signin.add(3, lastnameInput.getText().toString());
                 page2signin.add(4, phoneInput.getText().toString());
+                page2signin.add(5, emailInput.getText().toString());
 
                 Intent intent2 = new Intent(SignUpPage2.this, SignUpPage3.class);
                 intent2.putExtra("page2", page2signin);

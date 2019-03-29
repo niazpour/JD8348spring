@@ -16,6 +16,7 @@
         android:layout_marginTop="8dp"
         android:text="Background Information"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,8 +50,8 @@
         android:text="Agency"
         android:textColor="@android:color/black"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/lastnameInput"
-        app:layout_constraintHorizontal_bias="0.213"
+        app:layout_constraintEnd_toStartOf="@+id/agencyInput"
+        app:layout_constraintHorizontal_bias="0.112"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -70,7 +71,7 @@
         android:id="@+id/roleTag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="52dp"
         android:layout_marginTop="80dp"
         android:text="Role"
         android:textColor="@android:color/black"
