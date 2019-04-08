@@ -25,6 +25,7 @@ public class SignUpPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up_page);
 
+        //DATABASE: recreate in the first input page of every data category
         final ArrayList<String> page1signin = new ArrayList<>();
 
         final Button nextButton = findViewById(R.id.nextButton);
@@ -35,6 +36,7 @@ public class SignUpPage extends AppCompatActivity {
                 Spinner roleSpinner = findViewById(R.id.roleSpinner);
                 CheckBox yesBox = findViewById(R.id.leadCheckYes);
 
+                //DATABASE: add inputs to the created arraylist
                 page1signin.add(0, agencyInput.getText().toString());
                 page1signin.add(1, roleSpinner.getSelectedItem().toString());
                 if (yesBox.isChecked()) {
@@ -44,7 +46,10 @@ public class SignUpPage extends AppCompatActivity {
                 }
 
                 Intent intent2 = new Intent(SignUpPage.this, SignUpPage2.class);
+
+                //DATABASE: send arraylist to the next page
                 intent2.putExtra("page1", page1signin);
+
                 startActivity(intent2);
 
             }

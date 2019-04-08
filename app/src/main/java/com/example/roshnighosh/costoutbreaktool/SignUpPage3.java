@@ -36,10 +36,15 @@ public class SignUpPage3 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                //DATABASE: get arraylist from previous screen
                 page3signin = getIntent().getStringArrayListExtra("page2");
+
                 EditText dateInput = findViewById(R.id.dateInput);
+
+                //DATABASE: add this screen's inputs to the arraylist
                 page3signin.add(6, dateInput.getText().toString());
 
+                //DATABASE: ONLY INCLUDE IF FINAL SCREEN OF DATA CATEGORY
                 new SignUpDB().execute();
 
                 if (yesBox.isChecked()) {
@@ -52,7 +57,8 @@ public class SignUpPage3 extends AppCompatActivity {
             }
         });
     }
-
+    //DATABASE: ONLY INCLUDE IF FINAL SCREEN OF DATA CATEGORY
+    // Async Task runs outside of the main thread (database work cannot be done on main thread)
     private static class SignUpDB extends AsyncTask<Void, Void, Void> {
 
         @Override
@@ -60,17 +66,25 @@ public class SignUpPage3 extends AppCompatActivity {
 
             //FOR FUTURE WORK: change the below 3 parameters to match the database that is being used
             try(Connection con = DriverManager.getConnection("jdbc:mysql://academic-mysql.cc.gatech.edu", "cs3312_group", "_tADAn4D")) {
-                System.out.println("Connected!");
+                System.out.println("Connected!");// irrelevant line (just for testing)
+
+                //points connection to our database in the system
                 String queryString1 = "USE cs3312_group;";
+
+                //INSERT query using the inputs from the arraylist
                 String queryString2 = "INSERT INTO user_info (agency, role, lead, last_name, phone_number, email, start_date) " +
                         "VALUES ('"+page3signin.get(0)+"', '"+page3signin.get(1)+"', '"+page3signin.get(2)+"', '"+page3signin.get(3)+
                         "', '"+page3signin.get(4)+"', '"+page3signin.get(5)+"', '"+page3signin.get(6)+"');";
-                System.out.println(queryString2);
+
+                //System.out.println(queryString2); (just for testing)
+
+                //run below 4 lines to execute the queries in the database
                 Statement stmt = con.createStatement();
                 stmt.executeUpdate(queryString1);
                 stmt.executeUpdate(queryString2);
                 stmt.close();
-            } catch(SQLException e) {
+
+            } catch(SQLException e) { //just in case something goes wrong
                 System.out.println("Failed");
             }
             return null;

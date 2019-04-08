@@ -25,17 +25,23 @@ public class SignUpPage2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                //DATABASE: get arraylist passed from last screen
                 ArrayList<String> page2signin = getIntent().getStringArrayListExtra("page1");
+
                 EditText lastnameInput = findViewById(R.id.lastnameInput);
                 EditText phoneInput = findViewById(R.id.phoneInput);
                 EditText emailInput = findViewById(R.id.emailInput);
 
+                //DATABASE: add the new inputs to the arraylist
                 page2signin.add(3, lastnameInput.getText().toString());
                 page2signin.add(4, phoneInput.getText().toString());
                 page2signin.add(5, emailInput.getText().toString());
 
                 Intent intent2 = new Intent(SignUpPage2.this, SignUpPage3.class);
+
+                //DATABASE: send the arraylist on to the next page
                 intent2.putExtra("page2", page2signin);
+
                 startActivity(intent2);
             }
         });
