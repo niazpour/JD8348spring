@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS `user_info` (
 
-  `iduser_info` INT NOT NULL AUTO_INCREMENT,
+  `user_id` INT NOT NULL AUTO_INCREMENT,
 
   `agency` VARCHAR(45) NULL,
 
@@ -16,4 +16,260 @@ CREATE TABLE IF NOT EXISTS `user_info` (
 
   `start_date` DATE NULL,
 
-  PRIMARY KEY (`iduser_info`));
+  PRIMARY KEY (`user_id`));
+
+CREATE TABLE `outbreak_info` (
+
+  `outbreak_id` INT NOT NULL AUTO_INCREMENT,
+
+  `outbreak_location` VARCHAR(45) NULL,
+
+  `o_user_id` INT NOT NULL,
+
+  PRIMARY KEY (`outbreak_id`),
+
+  FOREIGN KEY o_user_id (o_user_id)
+
+  REFERENCES user_info(user_id)
+
+  ON DELETE CASCADE
+
+  ON UPDATE CASCADE
+
+  );
+
+CREATE TABLE `prospective_personnel` (
+
+`fkp_outbreak_id` INT NOT NULL,
+`fkp_user_id` INT NOT NULL,
+
+`current_date` DATE NOT NULL,
+
+`completed` TINYINT NULL,
+
+`total_hours` DECIMAL NULL,
+
+`task` VARCHAR(45) NULL,
+
+`confidence_level` INT NULL,
+
+PRIMARY KEY (`fkp_outbreak_id`, `fkp_user_id`, `current_date`),
+FOREIGN KEY fkp_outbreak_id (fkp_outbreak_id)
+
+REFERENCES outbreak_info(outbreak_id)
+
+ON DELETE CASCADE
+
+ON UPDATE CASCADE,
+FOREIGN KEY fkp_user_id (fkp_user_id)
+
+REFERENCES user_info(user_id)
+
+ON DELETE CASCADE
+
+ON UPDATE CASCADE
+
+);
+
+CREATE TABLE `retrospective_personnel` (
+
+`fkr_outbreak_id` INT NOT NULL,
+`fkr_user_id` INT NOT NULL,
+
+`current_date` DATE NOT NULL,
+
+`completed` TINYINT NULL,
+
+`total_hours` DECIMAL NULL,
+
+`task` VARCHAR(45) NULL,
+
+`confidence_level` INT NULL,
+
+PRIMARY KEY (`fkr_outbreak_id`, `fkr_user_id`, `current_date`),
+FOREIGN KEY fkr_outbreak_id (fkr_outbreak_id)
+
+REFERENCES outbreak_info(outbreak_id)
+
+ON DELETE CASCADE
+
+ON UPDATE CASCADE,
+FOREIGN KEY fkr_user_id (fkr_user_id)
+
+REFERENCES user_info(user_id)
+
+ON DELETE CASCADE
+
+ON UPDATE CASCADE
+
+);
+
+CREATE TABLE `transportation` (
+
+`fkt_outbreak_id` INT NOT NULL,
+
+`fkt_user_id` INT NOT NULL,
+
+`current_date` DATE NOT NULL,
+
+`completed` TINYINT NULL,
+
+`start_date` DATE NULL,
+
+`purpose` VARCHAR(45) NULL,
+
+`total_mileage` DECIMAL NULL,
+
+`reimbursement_rate` DECIMAL NULL,
+
+`parking_fees` DECIMAL NULL,
+
+`uber_taxi_costs` DECIMAL NULL,
+
+`hotel_costs` DECIMAL NULL,
+
+`flight_costs` DECIMAL NULL,
+
+`trip_per_diem` VARCHAR(45) NULL,
+
+PRIMARY KEY (`fkt_outbreak_id`, `fkt_user_id`, `current_date`),
+
+FOREIGN KEY fkt_outbreak_id (fkt_outbreak_id)
+
+REFERENCES outbreak_info(outbreak_id)
+
+ON DELETE CASCADE
+
+ON UPDATE CASCADE,
+
+FOREIGN KEY fkt_user_id (fkt_user_id)
+
+REFERENCES user_info(user_id)
+
+ON DELETE CASCADE
+
+ON UPDATE CASCADE
+
+);
+
+CREATE TABLE `laboratory` (
+`fkl_outbreak_id` INT NOT NULL,
+ `fkl_user_id` INT NOT NULL,
+`current_date` DATE NOT NULL,
+`completed` TINYINT NULL,
+`pfge_test` INT NULL,
+`wgs_test` INT NULL,
+`virulence_test` INT NULL,
+`ast_test` INT NULL,
+`serotyping_test` INT NULL,
+`culture_test` INT NULL,
+`isolate_identification_test` INT NULL,
+PRIMARY KEY (`fkl_outbreak_id`, `fkl_user_id`, `current_date`),
+FOREIGN KEY fkl_outbreak_id (fkl_outbreak_id)
+REFERENCES outbreak_info(outbreak_id)
+ON DELETE CASCADE
+ON UPDATE CASCADE,
+FOREIGN KEY fkl_user_id (fkl_user_id)
+REFERENCES user_info(user_id)
+ON DELETE CASCADE
+ON UPDATE CASCADE
+);
+
+CREATE TABLE `other` (
+
+`fkot_outbreak_id` INT NOT NULL,
+
+`fkot_user_id` INT NOT NULL,
+
+`current_date` DATE NOT NULL,
+
+`completed` TINYINT NULL,
+
+`purpose` VARCHAR(45) NULL,
+`date` DATE NULL,
+`costs` DECIMAL NULL,
+`description_of_costs` VARCHAR(90) NULL,
+`funding_source` VARCHAR(45) NULL,
+PRIMARY KEY (`fkot_outbreak_id`, `fkot_user_id`, `current_date`),
+
+FOREIGN KEY fkot_outbreak_id (fkot_outbreak_id)
+
+REFERENCES outbreak_info(outbreak_id)
+
+ON DELETE CASCADE
+
+ON UPDATE CASCADE,
+
+FOREIGN KEY fkot_user_id (fkot_user_id)
+
+REFERENCES user_info(user_id)
+
+ON DELETE CASCADE
+
+ON UPDATE CASCADE
+
+);
+
+CREATE TABLE `overtime` (
+
+`fkov_outbreak_id` INT NOT NULL,
+
+`fkov_user_id` INT NOT NULL,
+
+`current_date` DATE NOT NULL,
+
+`completed` TINYINT NULL,
+
+`more_than_40_hrs` TINYINT NULL,
+`compensation_description` VARCHAR(90) NULL,
+PRIMARY KEY (`fkov_outbreak_id`, `fkov_user_id`, `current_date`),
+
+FOREIGN KEY fkov_outbreak_id (fkov_outbreak_id)
+
+REFERENCES outbreak_info(outbreak_id)
+
+ON DELETE CASCADE
+
+ON UPDATE CASCADE,
+
+FOREIGN KEY fkov_user_id (fkov_user_id)
+
+REFERENCES user_info(user_id)
+
+ON DELETE CASCADE
+
+ON UPDATE CASCADE
+
+);
+
+CREATE TABLE `offset` (
+
+`fkof_outbreak_id` INT NOT NULL,
+
+`fkof_user_id` INT NOT NULL,
+
+`current_date` DATE NOT NULL,
+
+`completed` TINYINT NULL,
+
+`impact_of_outbreak` VARCHAR(90) NULL,
+`proportion_work_activities` VARCHAR(90) NULL,
+PRIMARY KEY (`fkof_outbreak_id`, `fkof_user_id`, `current_date`),
+
+FOREIGN KEY fkof_outbreak_id (fkof_outbreak_id)
+
+REFERENCES outbreak_info(outbreak_id)
+
+ON DELETE CASCADE
+
+ON UPDATE CASCADE,
+
+FOREIGN KEY fkof_user_id (fkof_user_id)
+
+REFERENCES user_info(user_id)
+
+ON DELETE CASCADE
+
+ON UPDATE CASCADE
+
+);
