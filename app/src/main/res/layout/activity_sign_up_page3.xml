@@ -47,7 +47,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="96dp"
-        android:text="Can you roughly identify the first date you were working in this outbreak? Please consult your calendar to improve your recall of the dates and hours you spent working on this outbreak."
+        android:text="What is the first date (roughly) that you began working on this outbreak?"
         android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textSize="16sp"

@@ -13,7 +13,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Retrospective Personnel"
+        android:text="Retrospective Hours"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,30 +22,30 @@
 
     <TextView
         android:id="@+id/textView21"
-        android:layout_width="403dp"
-        android:layout_height="48dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Please report the total number of hours that you worked before receiving this tool "
+        android:text="Report hours in quarter increments."
         android:textColor="@android:color/black"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
         tools:layout_editor_absoluteX="4dp" />
 
     <TextView
         android:id="@+id/textView22"
-        android:layout_width="401dp"
-        android:layout_height="107dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Outbreak investigation hours include all efforts both directly or indirectly related to the investigation (e.g., case interviews, travel time, update meetings with leadership, time spent packaging samples to be sent to laboratories, administrative time setting up meetings and coordinating efforts, etc.)."
+        android:text="Hours should include all efforts related to this outbreak investigation (e.g., case interviews, travel time, update meetings with leadership, supervising, packaging samples for shipment, setting up meetings, coordinating efforts, etc.)."
         android:textColor="@android:color/black"
         app:layout_constraintTop_toBottomOf="@+id/textView21"
         tools:layout_editor_absoluteX="5dp" />
 
     <TextView
         android:id="@+id/textView23"
-        android:layout_width="399dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text='If you find yourself debating whether certain activities should be included, ask yourself: "Would I have done this (e.g., attended this meeting, completed this task, etc.) if we were not investigating this outbreak?". If the answer is no, include that time. '
+        android:text="If debating whether certain activities should be included, consider if you would have done this task had you not been investigating the outbreak? If not, include that time."
         android:textColor="@android:color/black"
         app:layout_constraintTop_toBottomOf="@+id/textView22"
         tools:layout_editor_absoluteX="6dp" />

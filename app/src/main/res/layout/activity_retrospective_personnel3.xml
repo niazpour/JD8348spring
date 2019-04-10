@@ -52,19 +52,19 @@
 
     <TextView
         android:id="@+id/textView26"
-        android:layout_width="398dp"
-        android:layout_height="230dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="*For laboratory staff, time that has not already been accounted for those estimates should be reported here. Specifically, time spent actively preparing or processing a test is captured in the unit cost. However, any additional time spent on meetings, database management, writing and reporting results, and other outbreak related tasks should be reported here as Personnel time. Any time spent conducting other non-outbreak specific work while tests are underway should not be included."
+        android:text="Note: For laboratory staff, time spent actively preparing or processing a test is already captured in unit cost for tests. However, any additional time spent on meetings, database management, writing and reporting results, and other outbreak related tasks should be reported as personnel hours."
         android:textColor="@android:color/black"
         app:layout_constraintBottom_toTopOf="@+id/finishButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:layout_constraintVertical_bias="0.247" />
+        app:layout_constraintVertical_bias="0.239" />
 
 </android.support.constraint.ConstraintLayout>

@@ -27,7 +27,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="28dp"
-        android:text="Please report hours worked in nearest quarter hour increments (e.g. when working from 4:00 to 5:10 round up for reporting purposes to 1.25 hours)."
+        android:text="Report hours in quarter increments."
         android:textColor="@android:color/black"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,8 +41,7 @@
         android:layout_height="105dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="Outbreak investigation hours include all efforts both directly or indirectly related to the investigation (e.g., case interviews, travel time, update meetings with leadership, time spent packaging samples to be sent to laboratories, administrative time setting up meetings and coordinating efforts, etc.)."
+        android:text="Hours should include all efforts related to this outbreak investigation (e.g., case interviews, travel time, update meetings with leadership, supervising, packaging samples for shipment, setting up meetings, coordinating efforts, etc.)."
         android:textColor="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,14 +55,31 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text='If you find yourself debating whether certain activities should be included, ask yourself: "Would I have done this (e.g., attended this meeting, completed this task, etc.) if we were not investigating this outbreak?". If the answer is no, include that time. '
+        android:text="If debating whether certain activities should be included, consider if you would have done this task had you not been investigating the outbreak? If not, include that time."
         android:textColor="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8"
-        app:layout_constraintVertical_bias="0.122" />
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:text="Note: For laboratory staff, time spent actively preparing or processing a test is already captured in unit cost for tests. However, any additional time spent on meetings, database management, writing and reporting results, and other outbreak related tasks should be reported as personnel hours."
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintVertical_bias="0.258" />
 
     <Button
         android:id="@+id/finishButton"

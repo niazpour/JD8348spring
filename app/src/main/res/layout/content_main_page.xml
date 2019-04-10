@@ -15,7 +15,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="36dp"
-        android:text="Hello! Welcome to the Outbreak Costing App!"
+        android:text="Hello! Welcome to ORCAS. To report cost components, click on the menu in the top left corner and select a category."
         android:textAlignment="center"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"

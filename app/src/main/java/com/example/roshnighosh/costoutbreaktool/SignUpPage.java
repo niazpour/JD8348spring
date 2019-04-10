@@ -60,7 +60,7 @@ public class SignUpPage extends AppCompatActivity {
                "Emergency Preparedness and Response", "Environmental Health",
                 "Epidemiology", "Laboratory (see note in description)",
                 "Legal", "Public Health Communications (media)",
-                "Public Health Nurse", "Student Worker (unpaid)"};
+                "Public Health Nurse", "Student Worker (unpaid)", "Interpreter"};
 
         Spinner spinner = (Spinner) findViewById(R.id.roleSpinner);
 

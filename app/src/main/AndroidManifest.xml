@@ -75,9 +75,6 @@
             android:name=".RetrospectivePersonnel1"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".RetrospectivePersonnel2"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".RetrospectivePersonnel3"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity

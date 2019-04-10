@@ -17,7 +17,7 @@ public class RetrospectivePersonnel1 extends AppCompatActivity {
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(RetrospectivePersonnel1.this, RetrospectivePersonnel2.class);
+                Intent intent = new Intent(RetrospectivePersonnel1.this, RetrospectivePersonnel3.class);
                 startActivity(intent);
             }
         });

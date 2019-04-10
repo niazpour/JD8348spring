@@ -35,9 +35,10 @@ public class RetrospectivePersonnel4 extends AppCompatActivity {
         numPicker.setMinValue(0);
 
         final String[] select_task = {
-                "Select Task", "Data Management", "Data Analysis", "Lab Methods", "EH Methods",
-                "Epi Methods", "Information Gathering", "Communications(investigational partners)", "Material Development",
-                "Public Communications", "Leadership", "Other Tasks", "Legal"};
+                "Select Task", "Data Collection (interviews, EH assessments, sample collection)", "Data Management/Analysis",
+                "Material Development (compiling/drafting/clearing scientific or press materials",
+                "Meetings (internal, industry, outbreak setting, etc.)", "Media Responses", "Administrative",
+                "Legal"};
 
         Spinner spinner = (Spinner) findViewById(R.id.taskSpinner);
 
