@@ -32,7 +32,7 @@ public class HomePage extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                Intent intent = new Intent(HomePage.this, LoginPage.class);
+                Intent intent = new Intent(HomePage.this, OutbreakChoice.class);
                 startActivity(intent);
             }
         });
