@@ -93,6 +93,8 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textMultiLine"
+        android:textAlignment="center"
+        android:background="@drawable/smalltextbox"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

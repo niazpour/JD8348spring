@@ -86,6 +86,8 @@
         android:ems="10"
         android:hint="YYYY-MM-DD"
         android:inputType="date"
+        android:textAlignment="center"
+        android:background="@drawable/smalltextbox"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
