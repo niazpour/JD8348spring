@@ -14,12 +14,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="91dp">
+        android:layout_marginTop="12dp">
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="250dp"
-            android:layout_height="200dp"
+            android:layout_width="200dp"
+            android:layout_height="170dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:src="@drawable/orca" />
@@ -38,114 +38,81 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/relativeLayout2"
-        android:gravity="center"
-        android:layout_marginTop="100dp">
-
-        <RelativeLayout
-            android:id="@+id/LastName"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginRight="20dp"
-
-            >
-
-            <TextView
-                android:id="@+id/textView24"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/editText13"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="40dp"
-                android:text="Last Name"
-                android:textColor="#FFFFFF"
-                android:textSize="19sp" />
-
-
-            <EditText
-                android:id="@+id/editText13"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_toEndOf="@+id/textView24"
-                android:background="@drawable/rectangle"
-                android:ems="10"
-                android:inputType="textEmailAddress" />
-
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/PhoneNumber"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
-            android:layout_below="@+id/LastName"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="50dp">
-
-
-            <TextView
-                android:id="@+id/textView25"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Phone Number"
-                android:textColor="#FFFFFF"
-                android:textSize="19sp"
-                tools:layout_editor_absoluteX="95dp"
-                tools:layout_editor_absoluteY="48dp" />
-
-
-            <EditText
-                android:id="@+id/editText12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@+id/textView25"
-                android:background="@drawable/rectangle"
-                android:ems="10"
-                android:inputType="phone" />
-
-
-        </RelativeLayout>
-
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/Buttons"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
+        android:layout_below="@+id/relativeLayout2"
+        android:layout_marginTop="42dp"
         android:gravity="center"
-        android:layout_marginBottom="90dp">
+        android:id="@+id/relativeLayout3">
 
-        <Button
-            android:id="@+id/logInButton"
+        <EditText
+            android:id="@+id/editText13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/editText12"
+            android:layout_below="@+id/editText12"
+            android:layout_marginTop="27dp"
+            android:background="@drawable/rectangle"
+            android:ems="10"
+            android:inputType="phone"
+            android:textAlignment="textStart" />
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/editText12"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="15dp"
+            android:text="Last Name"
+            android:textColor="#FFFFFF"
+            android:textSize="19sp"
+            tools:layout_editor_absoluteX="95dp"
+            tools:layout_editor_absoluteY="48dp" />
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/editText13"
+            android:layout_alignBottom="@+id/editText13"
+            android:layout_alignStart="@+id/textView25"
+            android:text="Phone Number"
+            android:textColor="#FFFFFF"
+            android:textSize="19sp" />
+
+        <EditText
+            android:id="@+id/editText12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="0dp"
-            android:background="@drawable/loginbutton" />
-
-        <Button
-            android:id="@+id/signUpButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="0dp"
-            android:layout_marginRight="10dp"
-            android:layout_toRightOf="@id/logInButton"
-            android:layout_toStartOf="@+id/logInButton"
-            android:background="@drawable/signup" />
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/rectangle"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
 
     </RelativeLayout>
+
+    <Button
+        android:id="@+id/logInButton"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignBaseline="@+id/signUpButton"
+        android:layout_alignBottom="@+id/signUpButton"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/loginbutton" />
+
+    <Button
+        android:id="@+id/signUpButton"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/relativeLayout3"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/signup" />
 
 
 </RelativeLayout>
