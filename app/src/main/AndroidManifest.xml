@@ -39,6 +39,10 @@
             android:label="@string/title_activity_lab"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+            android:name=".Lab2"
+            android:label="Lab2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".SignUpPage2"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
@@ -100,9 +104,6 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Other2"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Other3"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Other4"

@@ -30,9 +30,12 @@ public class ProspectivePersonnel2 extends AppCompatActivity {
             }
         });
 
-        final NumberPicker numPicker = findViewById(R.id.numberPicker);
-        numPicker.setMaxValue(100);
+        final NumberPicker numPicker = findViewById(R.id.numberPicker2);
+        numPicker.setMaxValue(10);
         numPicker.setMinValue(0);
+
+        String[] valueSet = {"0", "10", "20", "30", "40", "50", "60", "70", "80", "90", "100"};
+        numPicker.setDisplayedValues(valueSet);
 
         final String[] select_task = {
                 "Select Task", "Data Collection (interviews, EH assessments, sample collection)", "Data Management/Analysis",

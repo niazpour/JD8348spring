@@ -60,12 +60,12 @@
             android:id="@+id/textView25"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/editText12"
+            android:layout_above="@+id/editText13"
             android:layout_alignParentStart="true"
             android:layout_marginStart="15dp"
             android:text="Last Name"
             android:textColor="#FFFFFF"
-            android:textSize="19sp"
+            android:textSize="17sp"
             tools:layout_editor_absoluteX="95dp"
             tools:layout_editor_absoluteY="48dp" />
 
@@ -78,7 +78,7 @@
             android:layout_alignStart="@+id/textView25"
             android:text="Phone Number"
             android:textColor="#FFFFFF"
-            android:textSize="19sp" />
+            android:textSize="17sp" />
 
         <EditText
             android:id="@+id/editText12"

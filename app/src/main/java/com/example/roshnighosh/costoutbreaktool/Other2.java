@@ -17,7 +17,7 @@ public class Other2 extends AppCompatActivity {
         finishButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Other2.this, Other3.class);
+                Intent intent = new Intent(Other2.this, Other4.class);
                 startActivity(intent);
             }
         });

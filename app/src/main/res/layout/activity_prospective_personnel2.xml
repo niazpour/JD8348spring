@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#c9e7ff">
+    android:background="#c9e7ff"
+    tools:context="com.example.roshnighosh.costoutbreaktool.ProspectivePersonnel2">
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
         android:text="Prospective Personnel"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textSize="30sp"
@@ -21,40 +21,59 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/hoursLabel"
-        android:layout_width="144dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="104dp"
-        android:text="Total Hours"
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/hoursInput"
-        android:layout_width="141dp"
-        android:layout_height="42dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="90dp"
-        android:ems="10"
-        android:inputType="number"
-        android:textAlignment="center"
-        android:background="@drawable/smalltextbox"
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="27dp"
+        app:backgroundTint="@android:color/holo_blue_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.446"
-        app:layout_constraintStart_toEndOf="@+id/hoursLabel"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.938"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.985"
+        app:srcCompat="@android:drawable/ic_menu_help" />
+
+    <Button
+        android:id="@+id/finishButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fab"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button"
+        android:text="Finish"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/taskSpinner"
+        android:layout_width="200dp"
+        android:layout_height="36dp"
+        android:layout_alignBottom="@+id/tasksLabel"
+        android:layout_alignEnd="@+id/hoursInput"
+        app:layout_constraintBottom_toTopOf="@+id/numberPicker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.843"
+        app:layout_constraintStart_toEndOf="@+id/tasksLabel"
+        app:layout_constraintTop_toBottomOf="@+id/hoursInput"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/tasksLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/hoursInput"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="75dp"
         android:text="Tasks"
         android:textColor="@android:color/black"
         android:textSize="18sp"
@@ -65,78 +84,50 @@
         android:id="@+id/textView13"
         android:layout_width="144dp"
         android:layout_height="100dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_above="@+id/finishButton"
+        android:layout_alignStart="@+id/tasksLabel"
+        android:layout_marginBottom="48dp"
         android:text="How confident are you in the accuracy of your hours?"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tasksLabel"
-        app:layout_constraintVertical_bias="0.261" />
+        app:layout_constraintVertical_bias="0.286" />
 
-    <Button
-        android:id="@+id/finishButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="finish"
-        android:textColor="#FFFFFF"
-        android:background="@drawable/button"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <EditText
+        android:id="@+id/hoursInput"
+        android:layout_width="141dp"
+        android:layout_height="42dp"
+        android:layout_alignEnd="@+id/fab"
+        android:layout_below="@+id/textView6"
+        android:layout_marginTop="54dp"
+        android:background="@drawable/smalltextbox"
+        android:ems="10"
+        android:inputType="number"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.846" />
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toEndOf="@+id/hoursLabel"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.938"
+    <TextView
+        android:id="@+id/hoursLabel"
+        android:layout_width="144dp"
+        android:layout_height="33dp"
+        android:layout_alignStart="@+id/tasksLabel"
+        android:layout_alignTop="@+id/hoursInput"
+        android:text="Total Hours"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.985"
-        app:srcCompat="@android:drawable/ic_menu_help" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <NumberPicker
-        android:id="@+id/numberPicker"
-        android:layout_width="136dp"
-        android:layout_height="102dp"
-        android:layout_marginBottom="50dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/finishButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.707"
-        app:layout_constraintStart_toEndOf="@+id/textView13" />
+        android:id="@+id/numberPicker2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignEnd="@+id/textView6"
+        android:layout_alignTop="@+id/textView13" />
 
-    <Spinner
-        android:id="@+id/taskSpinner"
-        android:layout_width="280dp"
-        android:layout_height="36dp"
-        android:layout_marginBottom="24dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="50dp"
-        app:layout_constraintBottom_toTopOf="@+id/numberPicker"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.692"
-        app:layout_constraintStart_toEndOf="@+id/tasksLabel"
-        app:layout_constraintTop_toBottomOf="@+id/hoursInput"
-        app:layout_constraintVertical_bias="0.0" />
-
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>

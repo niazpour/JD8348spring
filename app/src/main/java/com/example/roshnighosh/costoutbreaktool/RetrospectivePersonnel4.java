@@ -21,7 +21,7 @@ public class RetrospectivePersonnel4 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_retrospective_personnel4);
 
-        final Button finishButton = findViewById(R.id.finishButton);
+        final Button finishButton = findViewById(R.id.finishButtonRP);
         finishButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -30,9 +30,12 @@ public class RetrospectivePersonnel4 extends AppCompatActivity {
             }
         });
 
-        final NumberPicker numPicker = findViewById(R.id.numberPicker);
-        numPicker.setMaxValue(100);
+        final NumberPicker numPicker = findViewById(R.id.numberPickerRP);
+        numPicker.setMaxValue(10);
         numPicker.setMinValue(0);
+
+        String[] valueSet = {"0", "10", "20", "30", "40", "50", "60", "70", "80", "90", "100"};
+        numPicker.setDisplayedValues(valueSet);
 
         final String[] select_task = {
                 "Select Task", "Data Collection (interviews, EH assessments, sample collection)", "Data Management/Analysis",
@@ -40,7 +43,7 @@ public class RetrospectivePersonnel4 extends AppCompatActivity {
                 "Meetings (internal, industry, outbreak setting, etc.)", "Media Responses", "Administrative",
                 "Legal"};
 
-        Spinner spinner = (Spinner) findViewById(R.id.taskSpinner);
+        Spinner spinner = (Spinner) findViewById(R.id.taskSpinnerRP);
 
         ArrayList<CheckSpinner> listTasks = new ArrayList<>();
 

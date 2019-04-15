@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.NumberPicker;
 
 /**
  * Created by Abby on 3/13/19.
@@ -25,5 +26,14 @@ public class Offset3 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        final NumberPicker numPickerOW = findViewById(R.id.numberPickerOW);
+        numPickerOW.setMaxValue(10);
+        numPickerOW.setMinValue(0);
+
+        String[] valueSet = {"0", "10", "20", "30", "40", "50", "60", "70", "80", "90", "100"};
+        numPickerOW.setDisplayedValues(valueSet);
+
+
     }
 }
