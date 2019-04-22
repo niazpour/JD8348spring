@@ -1,58 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:background="#c9e7ff"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.roshnighosh.costoutbreaktool.Lab">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#c9e7ff"
+    tools:context="com.example.roshnighosh.costoutbreaktool.FinalScreen">
 
     <TextView
-        android:id="@+id/textView36"
-        android:layout_width="366dp"
-        android:layout_height="wrap_content"
+        android:id="@+id/textView39"
+        android:layout_width="354dp"
+        android:layout_height="103dp"
+        android:layout_marginBottom="272dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="What date are you reporting for?"
+        android:text="Thank you for participating in this project. Your final data has been submitted. If at a later date you have any changes or additional data to report, please contact the economics team at ORCAS@cdc.gov."
         android:textAlignment="center"
         android:textColor="@android:color/black"
-        android:textSize="32sp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editText8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="124dp"
-        android:background="@drawable/smalltextbox"
-        android:ems="10"
-        android:hint="YYYY-MM-DD"
-        android:inputType="date"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView36" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/nextButtonLab"
-        android:layout_width="wrap_content"
+        android:id="@+id/logoutButton"
+        android:layout_width="172dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/button"
-        android:text="next"
+        android:text="Final data submission"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.941" />
+        app:layout_constraintVertical_bias="0.87" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
@@ -72,5 +57,4 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.985"
         app:srcCompat="@android:drawable/ic_menu_help" />
-
 </android.support.constraint.ConstraintLayout>

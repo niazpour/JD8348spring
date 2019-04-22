@@ -25,9 +25,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoginPage"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity
             android:name=".SignUpPage"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
@@ -110,6 +107,9 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".OutbreakChoice"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FinalScreen"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
