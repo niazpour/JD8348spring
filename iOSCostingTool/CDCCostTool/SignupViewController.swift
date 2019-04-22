@@ -35,7 +35,7 @@ class SignupViewController: UIViewController,UIPickerViewDelegate, UIPickerViewD
         self.rolePicker.delegate = self
         self.rolePicker.dataSource = self
         // Input the data into the array
-        pickerData = ["Role 1", "Role 2", "Role 3", "Role 4", "Role 5", "Role 6"]
+        pickerData = ["Epidemiology"]
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let viewController2 = segue.destination as? SignupForm2ViewController {

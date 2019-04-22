@@ -48,8 +48,8 @@ class ProspectFormViewController: ViewController, UIPickerViewDelegate, UIPicker
         self.confidencePicker.delegate = self
         self.confidencePicker.dataSource = self
         // Input the data into the array
-        taskData = ["Task 1", "Task 2", "Task 3", "Task 4", "Task 5", "Task 6"]
-        confidenceData = ["100", "75", "50", "25", "0"];
+        taskData = ["Select Task", "Task 2", "Task 3", "Task 4", "Task 5", "Task 6"]
+        confidenceData = ["80", "90", "100", "25", "0"];
     }
     
     @IBAction func onClick(_ sender: Any) {
